@@ -518,10 +518,11 @@ export class Anilist implements Searchable, MangaProgressProviding {
                     }
                 }
 
+                const progressVolumes = readAction.volumeNumber ? Math.max(Math.floor(readAction.volumeNumber) - 1, 0) : undefined
                 const params = {
                     mediaId: readAction.mangaId,
                     progress: Math.floor(readAction.chapterNumber),
-                    progressVolumes: readAction.volumeNumber ? Math.floor(readAction.volumeNumber) : undefined
+                    progressVolumes: progressVolumes
                 }
 
                 const response = await this.requestManager.schedule(App.createRequest({
@@ -535,7 +536,7 @@ export class Anilist implements Searchable, MangaProgressProviding {
                     anilistMangaCache[readAction.mangaId] = {
                         mediaListEntry: {
                             progress: Math.floor(readAction.chapterNumber),
-                            progressVolumes: readAction.volumeNumber ? Math.floor(readAction.volumeNumber) : undefined
+                            progressVolumes: progressVolumes
                         }
                     }
                 } else {

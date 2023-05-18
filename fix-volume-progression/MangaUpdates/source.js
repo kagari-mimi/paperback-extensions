@@ -2501,7 +2501,7 @@ exports.MangaUpdatesInfo = {
     author: 'IntermittentlyRupert',
     contentRating: types_1.ContentRating.EVERYONE,
     icon: 'icon.png',
-    version: '02c46ac',
+    version: 'c550d8d',
     description: 'MangaUpdates Tracker',
     websiteBaseURL: 'https://www.mangaupdates.com',
     intents: types_1.SourceIntents.MANGA_TRACKING | types_1.SourceIntents.SETTINGS_UI,

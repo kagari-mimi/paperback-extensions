@@ -2748,7 +2748,7 @@ exports.MyAnimeListInfo = {
     author: 'Netsky',
     contentRating: types_1.ContentRating.EVERYONE,
     icon: 'icon.png',
-    version: '1.0.0',
+    version: '02c46ac',
     description: 'MyAnimeList Tracker',
     websiteBaseURL: 'https://myanimelist.net',
     intents: types_1.SourceIntents.MANGA_TRACKING | types_1.SourceIntents.SETTINGS_UI

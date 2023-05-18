@@ -611,7 +611,7 @@ exports.AnilistInfo = {
     author: 'Faizan Durrani ♥ Netsky',
     contentRating: types_1.ContentRating.EVERYONE,
     icon: 'icon.png',
-    version: '1.1.6',
+    version: '02c46ac',
     description: 'Anilist Tracker',
     websiteBaseURL: 'https://anilist.co',
     intents: types_1.SourceIntents.MANGA_TRACKING | types_1.SourceIntents.SETTINGS_UI

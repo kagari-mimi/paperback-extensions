@@ -518,19 +518,10 @@ export class Anilist implements Searchable, MangaProgressProviding {
                     }
                 }
 
-                let params = {}
-                if (Math.floor(readAction.chapterNumber) == 1 && !readAction.volumeNumber) {
-                    params = {
-                        mediaId: readAction.mangaId,
-                        progress: 1,
-                        progressVolumes: 1
-                    }
-                } else {
-                    params = {
-                        mediaId: readAction.mangaId,
-                        progress: Math.floor(readAction.chapterNumber),
-                        progressVolumes: readAction.volumeNumber ? Math.floor(readAction.volumeNumber) : undefined
-                    }
+                const params = {
+                    mediaId: readAction.mangaId,
+                    progress: Math.floor(readAction.chapterNumber),
+                    progressVolumes: readAction.volumeNumber ? Math.floor(readAction.volumeNumber) : undefined
                 }
 
                 const response = await this.requestManager.schedule(App.createRequest({
